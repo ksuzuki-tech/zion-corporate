@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
 import { useState } from "react";
 
@@ -35,14 +34,7 @@ export function ContactSection() {
           subtitle="お問い合わせ"
         />
 
-        <motion.form
-          initial={{ opacity: 1, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          onSubmit={handleSubmit}
-          className="space-y-7"
-        >
+        <form onSubmit={handleSubmit} className="space-y-7">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <div>
               <label className="block text-[11px] tracking-[0.15em] text-black/28 mb-3 font-medium">
@@ -108,15 +100,13 @@ export function ContactSection() {
             />
           </div>
 
-          <motion.button
+          <button
             type="submit"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             className="w-full md:w-auto px-12 py-4 bg-black text-white text-[11px] tracking-[0.2em] font-medium rounded-full hover:bg-black/80 transition-colors duration-300"
           >
             SEND MESSAGE
-          </motion.button>
-        </motion.form>
+          </button>
+        </form>
       </div>
     </section>
   );

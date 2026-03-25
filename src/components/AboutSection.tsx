@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
 
 const features = [
@@ -36,12 +33,7 @@ export function AboutSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left: mission statement */}
-          <motion.div
-            initial={{ opacity: 1, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <p className="text-[15px] md:text-base text-black/60 leading-[1.9]">
               株式会社ZiONは、韓国風ファッションを中心とした
               アパレルEC事業を展開するスタートアップです。
@@ -61,17 +53,13 @@ export function AboutSection() {
                 SINCE 2026
               </span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: feature cards */}
           <div className="space-y-5">
-            {features.map((feature, i) => (
-              <motion.div
+            {features.map((feature) => (
+              <div
                 key={feature.title}
-                initial={{ opacity: 1, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
                 className="group p-7 border border-black/[0.05] bg-gray-50/50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-500"
               >
                 <div className="flex items-start gap-5">
@@ -85,7 +73,7 @@ export function AboutSection() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

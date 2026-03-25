@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
 
 const companyInfo = [
@@ -19,13 +16,7 @@ export function CompanySection() {
       <div className="max-w-4xl mx-auto">
         <SectionHeading label="— 04" title="COMPANY" subtitle="会社概要" />
 
-        <motion.div
-          initial={{ opacity: 1, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="border border-black/[0.05] bg-gray-50/30 rounded-xl overflow-hidden"
-        >
+        <div className="border border-black/[0.05] bg-gray-50/30 rounded-xl overflow-hidden">
           {companyInfo.map((item, i) => (
             <div
               key={item.label}
@@ -41,16 +32,10 @@ export function CompanySection() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Google Maps */}
-        <motion.div
-          initial={{ opacity: 1, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-8 border border-black/[0.05] rounded-xl h-56 md:h-72 overflow-hidden"
-        >
+        <div className="mt-8 border border-black/[0.05] rounded-xl h-56 md:h-72 overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.1!2d139.7537!3d35.6570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bb0f5555555%3A0x0!2z5p2x5Lqs6YO95riv5Yy66Iqd5aSn6ZaAMi0xLTE2!5e0!3m2!1sja!2sjp!4v1"
             width="100%"
@@ -61,7 +46,7 @@ export function CompanySection() {
             referrerPolicy="no-referrer-when-downgrade"
             title="ZiON オフィス所在地"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

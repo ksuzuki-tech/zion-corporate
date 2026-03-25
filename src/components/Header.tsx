@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const navItems = [
@@ -24,10 +23,7 @@ export function Header() {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-white/80 backdrop-blur-xl border-b border-black/5 shadow-sm"
@@ -62,51 +58,42 @@ export function Header() {
             className="md:hidden relative z-50 w-8 h-8 flex flex-col items-center justify-center gap-1.5"
             aria-label="Toggle menu"
           >
-            <motion.span
-              animate={menuOpen ? { rotate: 45, y: 6, backgroundColor: "#fff" } : { rotate: 0, y: 0, backgroundColor: "#000" }}
-              className="block w-6 h-px"
+            <span
+              className={`block w-6 h-px transition-all duration-300 ${
+                menuOpen ? "rotate-45 translate-y-[7px] bg-white" : "bg-black"
+              }`}
             />
-            <motion.span
-              animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block w-6 h-px bg-black"
+            <span
+              className={`block w-6 h-px bg-black transition-opacity duration-300 ${
+                menuOpen ? "opacity-0" : "opacity-100"
+              }`}
             />
-            <motion.span
-              animate={
-                menuOpen ? { rotate: -45, y: -6, backgroundColor: "#fff" } : { rotate: 0, y: 0, backgroundColor: "#000" }
-              }
-              className="block w-6 h-px"
+            <span
+              className={`block w-6 h-px transition-all duration-300 ${
+                menuOpen ? "-rotate-45 -translate-y-[7px] bg-white" : "bg-black"
+              }`}
             />
           </button>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile menu overlay */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex items-center justify-center"
-          >
-            <nav className="flex flex-col items-center gap-8">
-              {navItems.map((item, i) => (
-                <motion.a
-                  key={item.href}
-                  href={item.href}
-                  initial={{ opacity: 1, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-2xl tracking-[0.3em] text-white/80 hover:text-white transition-colors"
-                >
-                  {item.label}
-                </motion.a>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {menuOpen && (
+        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex items-center justify-center animate-fade-in-fast">
+          <nav className="flex flex-col items-center gap-8">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-2xl tracking-[0.3em] text-white/80 hover:text-white transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </>
   );
 }

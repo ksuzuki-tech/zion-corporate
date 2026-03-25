@@ -1,45 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const footerLinks = [
   { label: "BRANDS", href: "#brands" },
   { label: "ABOUT", href: "#about" },
   { label: "RECRUIT", href: "#recruit" },
   { label: "COMPANY", href: "#company" },
   { label: "CONTACT", href: "#contact" },
-];
-
-const socialLinks = [
-  {
-    label: "Instagram",
-    href: "#",
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <circle cx="12" cy="12" r="5" />
-        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  {
-    label: "TikTok",
-    href: "#",
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-      </svg>
-    ),
-  },
-  {
-    label: "X",
-    href: "#",
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M4 4l16 16M20 4L4 20" />
-      </svg>
-    ),
-  },
 ];
 
 export function Footer() {
@@ -76,25 +40,11 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Social & Contact */}
+          {/* Contact */}
           <div>
             <h4 className="text-[10px] tracking-[0.3em] text-black/30 mb-7 font-medium">
-              FOLLOW US
+              CONTACT
             </h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full border border-black/8 flex items-center justify-center text-black/35 hover:text-black hover:border-black/20 transition-colors duration-300"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </div>
             <div className="mt-8">
               <p className="text-[12px] text-black/30 leading-[1.9]">
                 〒105-0012

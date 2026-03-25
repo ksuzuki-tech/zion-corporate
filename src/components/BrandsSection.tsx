@@ -1,57 +1,39 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { brands } from "@/lib/brands";
 import { SectionHeading } from "./SectionHeading";
 
 function BrandCard({
   brand,
-  index,
 }: {
   brand: (typeof brands)[0];
-  index: number;
 }) {
   return (
-    <motion.a
+    <a
       href={`https://${brand.storeDomain}`}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 1, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.08 }}
-      whileHover={{ y: -6 }}
       className="group relative block"
     >
-      <div className="relative aspect-[3/4] bg-white border border-black/[0.05] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500">
+      <div className="relative aspect-[3/4] bg-white border border-black/[0.05] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1.5">
         {/* Colored top accent bar */}
         <div
           className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{ background: brand.brandColor }}
         />
 
-        {/* Subtle gradient on hover */}
-        <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          style={{
-            background: `linear-gradient(180deg, ${brand.brandColor}08, transparent 50%)`,
-          }}
-        />
-
         {/* Logo */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-8 py-6">
-          <div className="relative w-full flex-1 flex items-center justify-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 md:px-8 py-6">
+          <div className="relative w-full flex-1 flex items-center justify-center overflow-hidden">
             <img
               src={brand.logo}
               alt={`${brand.name} logo`}
-              width={180}
-              height={90}
-              className={`object-contain max-h-16 md:max-h-20 w-auto transition-transform duration-500 group-hover:scale-105 ${
+              className={`object-contain max-w-[80%] max-h-12 md:max-h-16 w-auto transition-transform duration-500 group-hover:scale-105 ${
                 brand.invertLogo ? "invert" : ""
               }`}
             />
           </div>
-          <p className="mt-auto text-[10px] text-black/25 tracking-[0.15em] group-hover:text-black/40 transition-colors duration-500">
+          <p className="mt-auto text-[10px] text-black/25 tracking-[0.15em] group-hover:text-black/40 transition-colors duration-500 text-center">
             {brand.description}
           </p>
         </div>
@@ -78,7 +60,7 @@ function BrandCard({
           </svg>
         </div>
       </div>
-    </motion.a>
+    </a>
   );
 }
 
@@ -93,8 +75,8 @@ export function BrandsSection() {
         />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
-          {brands.map((brand, i) => (
-            <BrandCard key={brand.name} brand={brand} index={i} />
+          {brands.map((brand) => (
+            <BrandCard key={brand.name} brand={brand} />
           ))}
         </div>
       </div>

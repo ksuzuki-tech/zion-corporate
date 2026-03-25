@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { brands } from "@/lib/brands";
 import { SectionHeading } from "./SectionHeading";
 
@@ -42,7 +41,7 @@ function BrandCard({
         {/* Logo */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-8 py-6">
           <div className="relative w-full flex-1 flex items-center justify-center">
-            <Image
+            <img
               src={brand.logo}
               alt={`${brand.name} logo`}
               width={180}

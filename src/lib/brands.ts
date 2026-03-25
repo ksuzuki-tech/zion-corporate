@@ -8,6 +8,8 @@ export interface Brand {
   invertLogo?: boolean;
 }
 
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/zion-corporate" : "";
+
 export const brands: Brand[] = [
   {
     name: "charme",
@@ -15,7 +17,7 @@ export const brands: Brand[] = [
     shopifyDomain: "db4ea1-fd.myshopify.com",
     storeDomain: "charmeofficial.site",
     description: "エレガンスとモダンの融合",
-    logo: "/brands/charme.png",
+    logo: `${BASE_PATH}/brands/charme.png`,
   },
   {
     name: "SUTORE",
@@ -23,7 +25,7 @@ export const brands: Brand[] = [
     shopifyDomain: "b86980-4.myshopify.com",
     storeDomain: "sutoreofficial.com",
     description: "ストリートの新定義",
-    logo: "/brands/SUTORE.png",
+    logo: `${BASE_PATH}/brands/SUTORE.png`,
   },
   {
     name: "SAREON",
@@ -31,7 +33,7 @@ export const brands: Brand[] = [
     shopifyDomain: "g1j0wx-3n.myshopify.com",
     storeDomain: "sareon.jp",
     description: "洗練された日常着",
-    logo: "/brands/SAREON.png",
+    logo: `${BASE_PATH}/brands/SAREON.png`,
   },
   {
     name: "Mearicheek",
@@ -39,7 +41,7 @@ export const brands: Brand[] = [
     shopifyDomain: "59998e-92.myshopify.com",
     storeDomain: "mearicheek.com",
     description: "遊び心あるスタイル",
-    logo: "/brands/Mearicheek.png",
+    logo: `${BASE_PATH}/brands/Mearicheek.png`,
     invertLogo: true,
   },
   {
@@ -48,7 +50,7 @@ export const brands: Brand[] = [
     shopifyDomain: "b92f06-2.myshopify.com",
     storeDomain: "100starsofficial.com",
     description: "大胆な自己表現",
-    logo: "/brands/100StarS.png",
+    logo: `${BASE_PATH}/brands/100StarS.png`,
   },
   {
     name: "SLAMZ",
@@ -56,7 +58,7 @@ export const brands: Brand[] = [
     shopifyDomain: "t9bvj7-a4.myshopify.com",
     storeDomain: "slamz.jp",
     description: "アクティブ＆クール",
-    logo: "/brands/SLAMZ.png",
+    logo: `${BASE_PATH}/brands/SLAMZ.png`,
   },
   {
     name: "GEEK",
@@ -64,7 +66,7 @@ export const brands: Brand[] = [
     shopifyDomain: "6cdd7f-3.myshopify.com",
     storeDomain: "geek-official.site",
     description: "カルチャーを纏う",
-    logo: "/brands/GEEK.png",
+    logo: `${BASE_PATH}/brands/GEEK.png`,
   },
   {
     name: "WEVIA",
@@ -72,6 +74,6 @@ export const brands: Brand[] = [
     shopifyDomain: "g9w6sg-s5.myshopify.com",
     storeDomain: "www.wevia.jp",
     description: "ナチュラル＆ミニマル",
-    logo: "/brands/WEVIA.png",
+    logo: `${BASE_PATH}/brands/WEVIA.png`,
   },
 ];

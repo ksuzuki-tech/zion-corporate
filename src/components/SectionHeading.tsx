@@ -12,7 +12,7 @@ export function SectionHeading({ label, title, subtitle }: SectionHeadingProps) 
   return (
     <div className="mb-16 md:mb-20">
       <motion.p
-        initial={{ opacity: 0, y: 15 }}
+        initial={{ opacity: 1, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
@@ -21,7 +21,7 @@ export function SectionHeading({ label, title, subtitle }: SectionHeadingProps) 
         {label}
       </motion.p>
       <motion.h2
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 1, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.1 }}
@@ -32,7 +32,7 @@ export function SectionHeading({ label, title, subtitle }: SectionHeadingProps) 
       </motion.h2>
       {subtitle && (
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 1, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}

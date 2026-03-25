@@ -84,7 +84,7 @@ export function Header() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex items-center justify-center"
@@ -94,7 +94,7 @@ export function Header() {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   onClick={() => setMenuOpen(false)}

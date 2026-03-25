@@ -29,12 +29,12 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center px-8">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 1, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-[11px] md:text-xs tracking-[0.5em] text-black/30 mb-10"
@@ -43,7 +43,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.2] text-black"
@@ -54,7 +54,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-10 text-xs md:text-sm text-black/30 tracking-[0.4em]"
@@ -63,7 +63,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.8 }}
             className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -86,7 +86,7 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"

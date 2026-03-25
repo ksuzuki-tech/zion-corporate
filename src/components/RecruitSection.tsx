@@ -12,7 +12,7 @@ export function RecruitSection() {
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="border border-black/[0.05] bg-white rounded-2xl px-8 py-16 md:px-16 md:py-24 lg:px-24 lg:py-28 text-center shadow-sm">
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -22,7 +22,7 @@ export function RecruitSection() {
           </motion.p>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -35,7 +35,7 @@ export function RecruitSection() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -47,7 +47,7 @@ export function RecruitSection() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -68,7 +68,7 @@ export function RecruitSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 1, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.7 }}

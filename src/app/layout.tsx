@@ -30,10 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="noise-overlay" />
-        <Header />
-        {children}
-        <Footer />
+        <div className="overflow-x-hidden max-w-full">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

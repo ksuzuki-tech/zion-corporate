@@ -34,18 +34,22 @@ export function CompanySection() {
           ))}
         </div>
 
-        {/* Google Maps */}
-        <div className="mt-8 border border-black/[0.05] rounded-xl h-56 md:h-72 overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.1!2d139.7537!3d35.6570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bb0f5555555%3A0x0!2z5p2x5Lqs6YO95riv5Yy66Iqd5aSn6ZaAMi0xLTE2!5e0!3m2!1sja!2sjp!4v1"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="ZiON オフィス所在地"
-          />
+        {/* Map placeholder */}
+        <div className="mt-8 border border-black/[0.05] bg-gray-50/30 rounded-xl h-56 md:h-72 flex items-center justify-center">
+          <div className="text-center">
+            <p className="text-black/20 text-xs tracking-[0.2em]">📍 MAP</p>
+            <p className="text-black/30 text-[13px] mt-3">
+              東京都港区芝大門2-1-16 +SHIFT SHIBADAIMON
+            </p>
+            <a
+              href="https://maps.google.com/?q=東京都港区芝大門2-1-16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 px-6 py-2 text-[11px] tracking-[0.15em] text-black/40 border border-black/10 rounded-full hover:text-black hover:border-black/25 transition-all duration-300"
+            >
+              Google Mapsで開く →
+            </a>
+          </div>
         </div>
       </div>
     </section>

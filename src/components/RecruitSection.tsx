@@ -1,8 +1,8 @@
 export function RecruitSection() {
   return (
     <section id="recruit" className="py-24 md:py-36 px-6 md:px-12 relative overflow-hidden bg-gray-50/50">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-100/25 rounded-full blur-[120px]" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] max-w-[600px] h-[25vw] max-h-[300px] bg-purple-100/25 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">

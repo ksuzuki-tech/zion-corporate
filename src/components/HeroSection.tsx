@@ -1,13 +1,11 @@
-"use client";
-
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-      {/* Soft gradient background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-100/50 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-100/40 rounded-full blur-[150px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-50/30 rounded-full blur-[200px]" />
+      {/* Soft gradient background - contained within section */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[40vw] max-w-[500px] h-[40vw] max-h-[500px] bg-purple-100/50 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[35vw] max-w-[400px] h-[35vw] max-h-[400px] bg-pink-100/40 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] max-w-[600px] h-[50vw] max-h-[600px] bg-blue-50/30 rounded-full blur-[200px]" />
       </div>
 
       {/* Subtle grid */}
